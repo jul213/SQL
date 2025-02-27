@@ -1,1 +1,1 @@
-create function calculoIVA()
+create function calculoIVA(@price money)
