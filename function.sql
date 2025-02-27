@@ -3,4 +3,5 @@ as
 begin 
     declare @iva money 
     set @iva = @price * 1.16
+    return @iva
 end
