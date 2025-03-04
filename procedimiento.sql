@@ -23,11 +23,11 @@ begin try
 insert into Customers(CustomerID, CompanyName) VALUES (@CustomerID,  @CompanyName);
 set @returnID = @CustomerID
 print 'se realizo un insert'
-BEGIN 
+end try
+BEGIN catch
 update Customers
-set Customers.CustomerID = @CustomerID
-Customers.CompanyName = @CompanyName
-WHERE Customers.CustomerID = @CustomerID
+set CompanyName = @CompanyName
+WHERE CustomerID = @CustomerID;
 print "se realizo un update"
 end 
 else
