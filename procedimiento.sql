@@ -26,9 +26,9 @@ update Customers
 set Customers.CustomerID = @CustomerID
 Customers.CompanyName = @CompanyName
 WHERE Customers.CustomerID = @CustomerID
-print("se realizo un update")
+print "se realizo un update"
 end 
 else
 begin 
-    print("se realizo un insert")
+    print "se realizo un insert"
 end
