@@ -30,5 +30,5 @@ print("se realizo un update")
 end 
 else
 begin 
-
+    print("se realizo un insert")
 end
