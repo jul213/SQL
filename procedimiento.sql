@@ -20,7 +20,7 @@ create procedure insert_u @CustomerID char(5),
 as
 begin 
 begin try
-insert into Customers(CustomerID, CompanyName) VALUES (@CustomerID,  @CompanyName)
+insert into Customers(CustomerID, CompanyName) VALUES (@CustomerID,  @CompanyName);
 if (@@ERROR <> 0)
 BEGIN 
 update Customers
