@@ -19,6 +19,7 @@ create procedure insert_u @CustomerID char(5),
                           @returnID char(5) OUTPUT
 as
 begin 
+begin try
 insert into Customers(CustomerID, CompanyName) VALUES (@CustomerID,  @CompanyName)
 if (@@ERROR <> 0)
 BEGIN 
