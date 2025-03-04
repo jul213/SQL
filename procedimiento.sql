@@ -29,6 +29,6 @@ update Customers
 set CompanyName = @CompanyName
 WHERE CustomerID = @CustomerID;
 set @returnID = @CustomerID;
-print "se realizo un update"
+print 'se realizo un update'
 end catch
 end;
