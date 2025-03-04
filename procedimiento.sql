@@ -20,4 +20,9 @@ create procedure insert_u @CustomerID char(5),
 as
 begin 
 insert into Customers(CustomerID, CompanyName) VALUES (CustomerID,  @ CompanyName)
-if ()
+if (@@ERROR <> 0)
+BEGIN 
+update Customers
+set Customers.CustomerID = @CustomerID
+Customers.CompanyName = @CompanyName
+WHERE Customers.CustomerID = @CustomerID
