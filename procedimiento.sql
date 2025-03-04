@@ -21,7 +21,7 @@ as
 begin 
 begin try
 insert into Customers(CustomerID, CompanyName) VALUES (@CustomerID,  @CompanyName);
-if (@@ERROR <> 0)
+set @returnID = @CustomerID
 BEGIN 
 update Customers
 set Customers.CustomerID = @CustomerID
